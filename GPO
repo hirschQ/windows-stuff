@@ -1,0 +1,11 @@
+Install Administrative Templates
+
+adml file to C:\Windows\PolicyDefinitions\
+admx file to its language directory like de-DE
+
+
+Check Applied Group Policies
+
+gpresult /scope user /v
+gpresult /scope computer /v
+
