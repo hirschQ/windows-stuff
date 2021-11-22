@@ -9,3 +9,4 @@ Check Applied Group Policies
 gpresult /scope user /v
 gpresult /scope computer /v
 
+:3
