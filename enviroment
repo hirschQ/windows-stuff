@@ -1,2 +1,12 @@
 profile corrupt
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
+
+
+smb1 disable
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
+Registry entry: SMB1
+REG_DWORD: 0 = Disabled
+REG_DWORD: 1 = Enabled
+Default: 1 = Enabled (No registry key is created)
+
