@@ -1,0 +1,12 @@
+Error after Cert Renew via ServerManager
+Login successful, but after redirecting to sessionbroker new cert not being used
+env: Windows Server 2019 Remote Access HTML 5 Browser
+
+PS:  
+Get-RDWebClientBrokerCert  >> thumbprint the old cert
+
+go to mmc>export new cert to BASE64 cer
+
+Import-RDWebClientBrokerCert C:\Users\Administrator\Documents\newcert.cer
+
+clear cache or test in private browser tab
