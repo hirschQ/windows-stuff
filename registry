@@ -1,12 +1,21 @@
-profile corrupt
+#profile corrupt
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
 
 
-smb1 disable
+#smb1 disable
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
-Registry entry: SMB1
+: SMB1
 REG_DWORD: 0 = Disabled
 REG_DWORD: 1 = Enabled
 Default: 1 = Enabled (No registry key is created)
 
+#office update path
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
+: UpdateChannel   > http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114    (official)
+                  > \\fileserver\share 
+                  
+                  
+            
+#smb2/smb3 prevent oplocks (heavy performance decrease)
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
