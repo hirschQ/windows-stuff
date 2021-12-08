@@ -1,0 +1,24 @@
+#allow all
+
+Set-ExecutionPolicy $RemoteSigned
+
+#allow only local signed
+
+Set-ExecutionPolicy $Signed
+
+#allow none
+
+Set-ExecutionPolicy $none
+
+
+
+
+####not working because your settings got overwritten by another policy?
+### go to local gpedit.msc your computer is not domaincomputer/server)
+>> admtemplates > windows components > windows powershell > script execution: [set to enable] OOOOOOR
+#go to domain controller gpo set exclusion for specific computer/server, instead of whole domain
+>> open delegation settings of group policy > go to advanced > add computer (remember filter type while searching) > find computer yo want to exclude
+> set 'ead'to true and  'apply policy' to deny
+
+
+gpupdate /force or better restart if possible

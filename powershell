@@ -1,4 +1,0 @@
-allow all
-
-Set-ExecutionPolicy $RemoteSigned
-
