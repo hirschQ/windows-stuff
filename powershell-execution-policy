@@ -1,14 +1,14 @@
 #allow all
 
-Set-ExecutionPolicy $RemoteSigned
+Set-ExecutionPolicy RemoteSigned
 
 #allow only local signed
 
-Set-ExecutionPolicy $Signed
+Set-ExecutionPolicy Signed
 
 #allow none
 
-Set-ExecutionPolicy $none
+Set-ExecutionPolicy none
 
 
 
